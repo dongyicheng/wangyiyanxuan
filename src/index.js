@@ -12,7 +12,7 @@ import {HashRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
 
 ReactDOM.render(
     <Router>
-
+        
             <App>
                 <Route path="/" exact={true} component={Home}/>
                 <Route path="/cart" component={Cart}/>
