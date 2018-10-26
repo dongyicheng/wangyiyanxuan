@@ -6,3 +6,6 @@ export function getCategory(){
 export function getSliders(){
     return get("/getSliders")
 }
+export function getList(){
+    return get("/getList")
+}

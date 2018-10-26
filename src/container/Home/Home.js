@@ -7,14 +7,15 @@ import Recommend from './recommed';
 
 class Home extends Component {
   componentDidMount(){
+    this.props.getCategory()
     this.props.getList()
     this.props.getSlider()
   }
   render() {
     return (
-      <div>
-        <HomeSearch list={this.props.list}/>
-        <Recommend sliders={this.props.sliders}/>
+      <div className="box">
+        <HomeSearch list={this.props.category}/>
+        <Recommend sliders={this.props.sliders} list={this.props.list}/>
       </div>
     )
   }

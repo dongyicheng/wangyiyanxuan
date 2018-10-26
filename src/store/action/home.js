@@ -1,11 +1,11 @@
 import * as Types from '../action-types'
-import {getCategory, getSliders} from "../../api/home"
+import {getCategory, getSliders, getList} from "../../api/home"
 export default {
-    getList() {
+    getCategory() {
         return function (dispatch, getState) {
             getCategory().then(list=>{
                 dispatch({
-                    type:Types.HOME_LIST,
+                    type:Types.GET_CATEGORY,
                     payload:list
                 })
             })
@@ -17,6 +17,16 @@ export default {
                 dispatch({
                     type:Types.GET_SLIDER,
                     payload:sliders
+                })
+            })
+        }
+    },
+    getList(){
+        return function (dispatch, getState) {
+            getList().then(list=>{
+                dispatch({
+                    type:Types.GET_LIST,
+                    payload:list
                 })
             })
         }
