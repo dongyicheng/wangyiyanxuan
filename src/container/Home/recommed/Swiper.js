@@ -12,7 +12,7 @@ export default class HomeSlider extends React.Component{
             auto:2000,
             callback:(index)=>{this.setState({index})}
         }
-        return <div>
+        return <div className="box">
             <div className="home-swipe">
                 {this.props.sliders.length>0?<ReactSwipe className="carousel" swipeOptions={option} key={this.props.sliders.length}>
                         {
