@@ -12,7 +12,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="box">
         <HomeSearch list={this.props.list}/>
         <Recommend sliders={this.props.sliders}/>
       </div>
