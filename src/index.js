@@ -12,7 +12,7 @@ import {HashRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
 
 ReactDOM.render(
     <Router>
-        
+        <Provider store={store}>
             <App>
                 <Route path="/" exact={true} component={Home}/>
                 <Route path="/cart" component={Cart}/>
@@ -20,5 +20,5 @@ ReactDOM.render(
                 <Route path="/goods" component={Goods}/>
                 <Route path="/profile" component={Profile}/>
             </App>
-        
+        </Provider>
     </Router>,window.root)
