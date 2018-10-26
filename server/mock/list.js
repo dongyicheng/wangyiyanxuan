@@ -2,6 +2,7 @@ module.exports = [
     {
         id: 1,
         title: '竹居·小魔方组合斗柜',
+        prop:['棕色'],
         desc:'模块化结构，多功能场景组合',
         flag:['今日特价'],
         price:'￥179',
@@ -12,6 +13,7 @@ module.exports = [
     {
         id: 2,
         title: '升级款95%白鹅绒秋冬加厚羽绒被',
+        prop:['白色'],
         desc:'热销5万+条，一条被子过冬',
         flag:['严选明星日','满赠'],
         price:'￥919',
@@ -22,6 +24,7 @@ module.exports = [
     {
         id: 3,
         title: '60s臻密绒磨毛四件套',
+        prop:['棕色'],
         desc:'浅绒如脂臻密，高级莫兰迪色系',
         flag:['严选明星日','满赠'],
         price:'￥459',
@@ -32,6 +35,7 @@ module.exports = [
     {
         id: 4,
         title: '多袋涂层织物旅行袋',
+        prop:['棕色'],
         desc:'时髦出行，防泼水处理使用更安心',
         flag:['配件特惠'],
         price:'￥209',
@@ -42,6 +46,7 @@ module.exports = [
     {
         id: 5,
         title: '缎面棒球帽',
+        prop:['粉色'],
         desc:'极简设计，造型利器，一秒出门。',
         flag:['配件特惠'],
         price:'￥47',
@@ -52,6 +57,7 @@ module.exports = [
     {
         id: 6,
         title: '牵绊永恒 双环镀金项链',
+        prop:['金色'],
         desc:'两圈相连，永恒相伴',
         flag:['万圣节特惠'],
         price:'￥287',
@@ -62,6 +68,7 @@ module.exports = [
     {
         id: 7,
         title: '100%羊毛 男式V领可机洗羊毛衫',
+        prop:['蓝色'],
         desc:'100%可机洗羊毛，优质澳洲羊毛，精简商务特色',
         flag:['满折'],
         price:'￥329',
@@ -72,6 +79,7 @@ module.exports = [
     {
         id: 8,
         title: '男式轻薄无缝羽绒服',
+        prop:['棕色'],
         desc:'一体无缝设计，大气温暖防钻绒',
         flag:['服装特惠'],
         price:'￥359',
@@ -82,6 +90,7 @@ module.exports = [
     {
         id: 9,
         title: '女式修身简约小脚裤',
+        prop:['棕色'],
         desc:'舒适弹力纱，呵护柔情的腿感',
         flag:['服装特惠'],
         price:'￥149',
@@ -92,6 +101,7 @@ module.exports = [
     {
         id: 10,
         title: '竹居·小魔方组合斗柜',
+        prop:['棕色'],
         desc:'模块化结构，多功能场景组合',
         flag:['今日特价'],
         price:'￥179',
@@ -102,6 +112,7 @@ module.exports = [
     {
         id: 11,
         title: '升级款95%白鹅绒秋冬加厚羽绒被',
+        prop:['棕色'],
         desc:'热销5万+条，一条被子过冬',
         flag:['严选明星日','满赠'],
         price:'￥919',
@@ -112,6 +123,7 @@ module.exports = [
     {
         id: 12,
         title: '60s臻密绒磨毛四件套',
+        prop:['棕色'],
         desc:'浅绒如脂臻密，高级莫兰迪色系',
         flag:['严选明星日','满赠'],
         price:'￥424',
@@ -122,6 +134,7 @@ module.exports = [
     {
         id: 13,
         title: '多袋涂层织物旅行袋',
+        prop:['棕色'],
         desc:'时髦出行，防泼水处理使用更安心',
         flag:['配件特惠'],
         price:'￥209',
@@ -132,6 +145,7 @@ module.exports = [
     {
         id: 14,
         title: '缎面棒球帽',
+        prop:['棕色'],
         desc:'极简设计，造型利器，一秒出门。',
         flag:['配件特惠'],
         price:'￥47',
@@ -142,6 +156,7 @@ module.exports = [
     {
         id: 15,
         title: '牵绊永恒 双环镀金项链',
+        prop:['棕色'],
         desc:'两圈相连，永恒相伴',
         flag:['万圣节特惠'],
         price:'￥287',
@@ -152,6 +167,7 @@ module.exports = [
     {
         id: 16,
         title: '100%羊毛 男式V领可机洗羊毛衫',
+        prop:['棕色'],
         desc:'100%可机洗羊毛，优质澳洲羊毛，精简商务特色',
         flag:['满折'],
         price:'￥329',
@@ -162,6 +178,7 @@ module.exports = [
     {
         id: 17,
         title: '男式轻薄无缝羽绒服',
+        prop:['棕色'],
         desc:'一体无缝设计，大气温暖防钻绒',
         flag:['服装特惠'],
         price:'￥359',
@@ -172,6 +189,7 @@ module.exports = [
     {
         id: 18,
         title: '女式修身简约小脚裤',
+        prop:['棕色'],
         desc:'舒适弹力纱，呵护柔情的腿感',
         flag:['服装特惠'],
         price:'￥149',
@@ -182,6 +200,7 @@ module.exports = [
     {
         id: 19,
         title: '竹居·小魔方组合斗柜',
+        prop:['棕色'],
         desc:'模块化结构，多功能场景组合',
         flag:['今日特价'],
         price:'￥179',
@@ -192,6 +211,7 @@ module.exports = [
     {
         id: 20,
         title: '升级款95%白鹅绒秋冬加厚羽绒被',
+        prop:['棕色'],
         desc:'热销5万+条，一条被子过冬',
         flag:['严选明星日','满赠'],
         price:'￥919',
@@ -202,6 +222,7 @@ module.exports = [
     {
         id: 21,
         title: '60s臻密绒磨毛四件套',
+        prop:['棕色'],
         desc:'浅绒如脂臻密，高级莫兰迪色系',
         flag:['严选明星日','满赠'],
         price:'￥424',
@@ -212,6 +233,7 @@ module.exports = [
     {
         id: 22,
         title: '多袋涂层织物旅行袋',
+        prop:['棕色'],
         desc:'时髦出行，防泼水处理使用更安心',
         flag:['配件特惠'],
         price:'￥209',
@@ -222,6 +244,7 @@ module.exports = [
     {
         id: 23,
         title: '缎面棒球帽',
+        prop:['棕色'],
         desc:'极简设计，造型利器，一秒出门。',
         flag:['配件特惠'],
         price:'￥47',
@@ -232,6 +255,7 @@ module.exports = [
     {
         id: 24,
         title: '牵绊永恒 双环镀金项链',
+        prop:['棕色'],
         desc:'两圈相连，永恒相伴',
         flag:['万圣节特惠'],
         price:'￥287',
@@ -242,6 +266,7 @@ module.exports = [
     {
         id: 25,
         title: '100%羊毛 男式V领可机洗羊毛衫',
+        prop:['棕色'],
         desc:'100%可机洗羊毛，优质澳洲羊毛，精简商务特色',
         flag:['满折'],
         price:'￥329',
@@ -252,6 +277,7 @@ module.exports = [
     {
         id: 26,
         title: '男式轻薄无缝羽绒服',
+        prop:['棕色'],
         desc:'一体无缝设计，大气温暖防钻绒',
         flag:['服装特惠'],
         price:'￥359',
@@ -262,6 +288,7 @@ module.exports = [
     {
         id: 27,
         title: '女式修身简约小脚裤',
+        prop:['棕色'],
         desc:'舒适弹力纱，呵护柔情的腿感',
         flag:['服装特惠'],
         price:'￥149',

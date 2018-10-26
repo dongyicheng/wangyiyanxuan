@@ -2,49 +2,32 @@ import React from 'react';
 
 export default class CartList extends React.Component{
     render(){
+
         return <div className='cart_list'>
             <ul>
-                <li>
-                    <div className='choose'><i className='iconfont icon-gouxuan'></i></div>
-                    <div className='cart_img'>
-                        <img src="http://yanxuan.nosdn.127.net/91b621e96c5c5cad6a86f7eddb8764d3.png?imageView&thumbnail=160x0&quality=75" alt=""/>
-                    </div>
-                    <div className='info_box'>
-                        <p className='title'>棒球帽</p>
-                        <p className='props'>粉色</p>
-                        <div className='foot'>
-                            <span className='price'>￥47</span>
-                            <span className='del_price'>￥59</span>
-                            <div className='change_num'>
-                                <i className='iconfont icon-minus-frameless'></i>
-                                <input className='num' type="text" value='2'/>
-                                <i className='iconfont icon-add-frameless'></i>
-                                {/*<div className='min'>-</div>
-                                <div className='num'>2</div>
-                                <div className='add'>+</div>*/}
+                {this.props.list.map((item,index) => {
+                    return <li key={index}>
+                        <div className='choose'>
+                            {item.isSelected ? <i onClick={() => {this.props.setChoose({index})}} className='iconfont icon-gouxuan'></i> : <i onClick={() => {this.props.setChoose({index})}} className='iconfont icon-radio'></i>}
+                        </div>
+                        <div className='cart_img'>
+                            <img src={item.url} alt=""/>
+                        </div>
+                        <div className='info_box'>
+                            <p className='title'>{item.title}</p>
+                            <p className='props'>{item.prop}</p>
+                            <div className='foot'>
+                                <span className='price'>{item.price}</span>
+                                <span className='del_price'>{item.del_price}</span>
+                                <div className='change_num'>
+                                    <i onClick={() => {this.props.setNum({i:index,num:-1})}} className='iconfont icon-minus-frameless'></i>
+                                    <input className='num' onChange={() => {}} type="text" value={item.num}/>
+                                    <i onClick={() => {this.props.setNum({i:index,num:1})}} className='iconfont icon-add-frameless'></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li>
-                    <div className='choose'><i className='iconfont icon-radio'></i></div>
-                    <div className='cart_img'>
-                        <img src="http://yanxuan.nosdn.127.net/91b621e96c5c5cad6a86f7eddb8764d3.png?imageView&thumbnail=160x0&quality=75" alt=""/>
-                    </div>
-                    <div className='info_box'>
-                        <p className='title'>棒球帽</p>
-                        <p className='props'>粉色</p>
-                        <div className='foot'>
-                            <span className='price'>￥47</span>
-                            <span className='del_price'>￥59</span>
-                            <div className='change_num'>
-                                <i className='iconfont icon-minus-frameless'></i>
-                                <input className='num' type="text" value='2'/>
-                                <i className='iconfont icon-add-frameless'></i>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                })}
             </ul>
         </div>
     }
