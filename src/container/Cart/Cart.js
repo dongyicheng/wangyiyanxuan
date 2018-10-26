@@ -7,10 +7,11 @@ import CartFooter from './CartFooter';
 
 export default class Cart extends Component {
   render() {
-    return <div>
-      <CartHeader/>
-      <CartPost/>
-      <CartList/>
+    return <div className='box'>
+        <CartHeader/>
+        <CartPost/>
+        <CartList/>
+        <CartFooter/>
     </div>
   }
 }

@@ -36,7 +36,7 @@
   .post_desc{
     margin-left: 20px;
   }
-  .post_more{
+  .icon-gengduo{
     float: right;
     margin-right: 20px;
   }
@@ -51,16 +51,19 @@
     li{
       height: 130px;
       position: relative;
+      border-bottom: 1px solid #eee;
       .choose{
         position: absolute;
         float: left;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
         margin-left: 15px;
-        overflow: hidden;
-        background: #7f7f7f;
-        top:40px;
+        top:45px;
+        .icon-gouxuan{
+          font-size: 24px;
+          color: #B4282D;
+        }
+        .icon-radio{
+          font-size: 32px;
+        }
       }
       .cart_img{
         position: absolute;
@@ -90,43 +93,104 @@
           margin-top: 5px;
         }
         .foot{
-          width: 210px;
+          width: 260px;
           margin-top: 30px;
           .price{
+            position: absolute;
+            float: left;
             color:#333;
             margin-right: 5px;
           }
           .del_price{
+            position: absolute;
+            float: left;
+            left: 45px;
             color:#ddd;
             text-decoration: line-through;
           }
           .change_num{
+            position: absolute;
             float: right;
-            top:25px;
-            .min{
-              width: 30px;
-              height: 30px;
+            left: 130px;
+            top:78px;
+            .icon-minus-frameless{
               float: left;
-              border: 1px solid #eee;
-              text-align: center;
+              font-size: 26px;
+              color: #E8E8E8;
+              padding: 2px;
+              border: 1px solid #E8E8E8;
             }
             .num{
-              width: 30px;
-              height: 30px;
+              width: 32px;
+              height: 32px;
               float: left;
               border: 1px solid #eee;
               text-align: center;
+              color: #E8E8E8;
+              font-size: 22px;
             }
-            .add{
-              width: 30px;
-              height: 30px;
+            .icon-add-frameless{
               float: left;
-              border: 1px solid #eee;
-              text-align: center;
+              font-size: 26px;
+              color: #E8E8E8;
+              padding: 2px;
+              border: 1px solid #E8E8E8;
             }
           }
         }
       }
     }
+  }
+}
+
+.cart_footer{
+  position: fixed;
+  bottom: 55px;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  .info{
+    width: 70%;
+    height: 100%;
+    float: left;
+    .left{
+      padding-left: 15px;
+      float: left;
+      font-size: 18px;
+      i{
+        padding-right: 5px;
+        position: relative;
+        top:5px;
+      }
+      .icon-gouxuan{
+        font-size: 24px;
+        color: #B4282D;
+      }
+      .icon-radio{
+        font-size: 32px;
+      }
+    }
+    .right{
+      float: right;
+      height: 100%;
+      line-height: 25px;
+      .total{
+        height: 25px;
+        color: #b4282d;
+      }
+      .youhui{
+        height: 25px;
+        color: #ccc;
+        font-size: 12px;
+      }
+    }
+  }
+  .btn{
+    width: 30%;
+    float: right;
+    font-size: 18px;
+    color: #f7f7f7;
+    text-align: center;
+    background: #b4282d;
   }
 }
