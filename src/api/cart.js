@@ -2,7 +2,8 @@ import {get,post} from './index';
 
 // 获取轮播图数据
 export function getCartList() {
-    return get('/getCartList');
+    return get('/getList');
+    // return get('/getCartList');
 }
 
 export function setNum(index) {

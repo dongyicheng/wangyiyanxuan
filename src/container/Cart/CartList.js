@@ -5,7 +5,7 @@ export default class CartList extends React.Component{
 
         return <div className='cart_list'>
             <ul>
-                {this.props.list.map((item,index) => {
+                {this.props.list.length ? this.props.list.map((item,index) => {
                     return <li key={index}>
                         <div className='choose'>
                             {item.isSelected ? <i onClick={() => {this.props.setChoose({index})}} className='iconfont icon-gouxuan'></i> : <i onClick={() => {this.props.setChoose({index})}} className='iconfont icon-radio'></i>}
@@ -27,7 +27,7 @@ export default class CartList extends React.Component{
                             </div>
                         </div>
                     </li>
-                })}
+                }): ''}
             </ul>
         </div>
     }
