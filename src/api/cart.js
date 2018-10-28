@@ -12,3 +12,7 @@ export function setNum(index) {
 export function setChoose(index) {
     return post('/setChoose',index);
 }
+
+export function delData() {
+    return post('/delData');
+}

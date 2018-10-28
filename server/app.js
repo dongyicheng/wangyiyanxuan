@@ -81,6 +81,32 @@ app.post('/setNum',function(req,res){
 
 app.post('/setChoose',function(req,res){
     let i = req.body.index;//得到请求体 body-parser中间件
+    console.log(i);
+    let cart_list = null;
+    fs.readFile(cartPath,'utf8',(err,data) => { // 异步过程；读取完毕后，会触发对应的回调函数
+        if(!err){
+            cart_list = JSON.parse(data);
+            if(i){
+                cart_list[i]["isSelected"] = !cart_list[i]["isSelected"];
+            }else{
+                cart_list = cart_list.map((item) => {
+                    item.isSelected = !item.isSelected;
+                    return item;
+                })
+            }
+            fs.writeFile(cartPath,JSON.stringify(cart_list),'utf8',(err,data) => {
+                if(!err){
+                    res.json(cart_list);
+                }
+            });
+
+        }
+    });
+
+});
+
+app.post('/delData',function(req,res){
+    let i = req.body.index;//得到请求体 body-parser中间件
 
     let cart_list = null;
     fs.readFile(cartPath,'utf8',(err,data) => { // 异步过程；读取完毕后，会触发对应的回调函数

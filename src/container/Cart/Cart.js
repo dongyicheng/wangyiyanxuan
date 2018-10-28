@@ -6,6 +6,7 @@ import CartHeader from './CartHeader';
 import CartPost from './CartPost';
 import CartList from './CartList';
 import CartFooter from './CartFooter';
+import CartListDel from "./CartListDel";
 
 class Cart extends Component {
     componentDidMount(){
@@ -14,10 +15,14 @@ class Cart extends Component {
     render() {
         // console.log(this.props);
         return <div className='box'>
-            <CartHeader/>
+            <CartHeader curType={this.props.currentTypes} changeType={this.props.changeCurType}/>
             <CartPost list={this.props.goodList} />
-            <CartList setChoose={this.props.setChoose} setNum={this.props.setNum} list={this.props.goodList}/>
-            <CartFooter/>
+            {this.props.currentTypes ?
+                <CartList setChoose={this.props.setChoose} setNum={this.props.setNum} list={this.props.goodList}/> :
+                <CartListDel setDelSelect={this.props.setDelSelect} setNum={this.props.setNum} list={this.props.goodList}/>
+            }
+
+            <CartFooter allStatus={this.props.allStatus} setChoose={this.props.setChoose} curType={this.props.currentTypes} list={this.props.goodList}/>
         </div>
     }
 }

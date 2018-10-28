@@ -32,5 +32,21 @@ export default {
                 })
             })
         }
+    },
+    changeCurType(){
+        return {type:Types.SET_CURTYPE};
+    },
+    setDelSelect(i){
+        return {type:Types.SET_DEL,i};
+    },
+    delData(){
+        return function (dispatch,getState) {
+            delData().then(list => {
+                dispatch({
+                    type:Types.DEL_DATA,
+                    payload:list
+                })
+            })
+        }
     }
 }
