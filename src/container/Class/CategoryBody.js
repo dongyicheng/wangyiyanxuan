@@ -1,24 +1,43 @@
 import React, {Component} from "react"
+import {connect} from "react-redux";
+import actions from "../../store/action/class";
 
-export default class CategoryBody extends Component {
+class CategoryBody extends Component {
     render() {
-        let categorys = this.props.category;
-        return <div className="category-body">
-            <div className="advertising">
-                <img src="http://yanxuan.nosdn.127.net/9545f529b91ed06092ca85a2b3594019.jpg" alt=""/>
-            </div>
-            <ul>
-                <li>
-                    <p>男装</p>
-                    <ul>
-                        <li>
-                            <img src="http://yanxuan.nosdn.127.net/1f44908a54d0a855d376d599372738d4.png" alt=""/>
-                            <span>男士外套</span>
+        console.log(this.props.sliders,222);
+
+          return <div className="category-body">
+              {this.props.sliders.filter((item,index)=>{
+              return item.id == this.props.index+1
+          }).map((item,index)=>{
+              return <div className="advertising" key={index}>
+                  <img src={item.url} alt=""/>
+              </div>
+          })}
+
+                <ul>
+                    {this.props.categoryBody.map((item,index)=>{
+                        return  <li key={index}>
+                        <p>{item.title}</p>
+                        <ul>
+                            {item.three.map((item,index)=>{
+                               return <li key={index}>
+                                   <img src={item.url} alt=""/>
+                                   <span>{item.title}</span>
+                               </li>
+                            })}
+
+                        </ul>
                         </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+                    })
+                    }
+
+
+
+                </ul>
+            </div>
+
     }
 }
+export default connect(state=>({...state.class1}),actions)(CategoryBody)
 

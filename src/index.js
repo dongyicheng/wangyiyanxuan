@@ -4,7 +4,9 @@ import Home from './container/Home/Home'
 import Cart from './container/Cart/Cart'
 import Class from './container/Class/Class'
 import Goods from './container/Goods/Goods'
+import Search from "./component/Search/Search"
 import Profile from './container/Profile/Profile'
+import Category from './container/Class/CategoryBody'
 import App from './container/App'
 import store from './store/index'
 import {Provider} from 'react-redux'
@@ -19,6 +21,7 @@ ReactDOM.render(
                 <Route path="/class" component={Class}/>
                 <Route path="/goods" component={Goods}/>
                 <Route path="/profile" component={Profile}/>
+                <Route path="/search" component={Search}/>
             </App>
         </Provider>
-    </Router>,window.root)
+    </Router>,window.root);
