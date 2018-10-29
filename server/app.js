@@ -81,18 +81,69 @@ app.post('/setNum',function(req,res){
 
 app.post('/setChoose',function(req,res){
     let i = req.body.index;//得到请求体 body-parser中间件
-
+    let val = req.body.val;
     let cart_list = null;
     fs.readFile(cartPath,'utf8',(err,data) => { // 异步过程；读取完毕后，会触发对应的回调函数
         if(!err){
             cart_list = JSON.parse(data);
-            cart_list[i]["isSelected"] = !cart_list[i]["isSelected"];
+            if(i != 'all'){
+                cart_list[i]["isSelected"] = !cart_list[i]["isSelected"];
+            }else{
+                cart_list = cart_list.map((item) => {
+                    item.isSelected = val;
+                    return item;
+                })
+            }
             fs.writeFile(cartPath,JSON.stringify(cart_list),'utf8',(err,data) => {
                 if(!err){
                     res.json(cart_list);
                 }
             });
 
+        }
+    });
+
+});
+
+app.post('/setDel',function(req,res){
+    let i = req.body.index;//得到请求体 body-parser中间件
+    let val = req.body.val;
+    let cart_list = null;
+    fs.readFile(cartPath,'utf8',(err,data) => { // 异步过程；读取完毕后，会触发对应的回调函数
+        if(!err){
+            cart_list = JSON.parse(data);
+            if(i != 'all'){
+                cart_list[i]["delSelect"] = !cart_list[i]["delSelect"];
+            }else{
+                cart_list = cart_list.map((item) => {
+                    item.delSelect = val;
+                    return item;
+                })
+            }
+            fs.writeFile(cartPath,JSON.stringify(cart_list),'utf8',(err,data) => {
+                if(!err){
+                    res.json(cart_list);
+                }
+            });
+
+        }
+    });
+
+});
+
+app.post('/delData',function(req,res){
+    let cart_list = null;
+    fs.readFile(cartPath,'utf8',(err,data) => { // 异步过程；读取完毕后，会触发对应的回调函数
+        if(!err){
+            cart_list = JSON.parse(data);
+            let new_list = cart_list.filter((item) => {
+                return !item.delSelect;
+            })
+            fs.writeFile(cartPath,JSON.stringify(new_list),'utf8',(err,data) => {
+                if(!err){
+                    res.json(new_list);
+                }
+            });
         }
     });
 

@@ -1,5 +1,5 @@
 import * as Types from '../action-types';
-import {getCartList,setNum,setChoose} from '../../api/cart';
+import {getCartList,setNum,setChoose,setDel,delData} from '../../api/cart';
 
 export default {
     getCartList(){
@@ -28,6 +28,41 @@ export default {
             setNum(i).then(list => {
                 dispatch({
                     type:Types.SET_NUM,
+                    payload:list
+                })
+            })
+        }
+    },
+    changeCurType(type){
+        if(type){
+            return {type:Types.SET_CURTYPE};
+        }else{
+            return function (dispatch,getState) {
+                setDel({index:'all',val:false}).then(list => {
+                    dispatch({
+                        type:Types.SET_CURTYPE,
+                        payload:list
+                    })
+                })
+            }
+        }
+
+    },
+    setDelSelect(i){
+        return function (dispatch,getState) {
+            setDel(i).then(list => {
+                dispatch({
+                    type:Types.SET_DEL,
+                    payload:list
+                })
+            })
+        }
+    },
+    delData(){
+        return function (dispatch,getState) {
+            delData().then(list => {
+                dispatch({
+                    type:Types.DEL_DATA,
                     payload:list
                 })
             })

@@ -1,4 +1,5 @@
 import React from 'react';
+import CartPostChild from "./CartPostChild";
 
 export default class CartPost extends React.Component{
     render(){
@@ -18,8 +19,8 @@ export default class CartPost extends React.Component{
             str = `再购${m}.00元满足免邮条件`;
         }
         return <div className='cart_post'>
-            <span className='post_desc'>{str}</span>
-            {num >= 88 ? '' : <i className='iconfont icon-gengduo'></i>}
+            {num <= 0 ? <CartPostChild/>: <span className='post_desc'>{str}</span>}
+            {num >= 88 || num == 0 ? '' : <i className='iconfont icon-gengduo'></i>}
         </div>
     }
 }
