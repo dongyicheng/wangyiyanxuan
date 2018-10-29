@@ -22,7 +22,7 @@ class Cart extends Component {
                 <CartListDel setDelSelect={this.props.setDelSelect} setNum={this.props.setNum} list={this.props.goodList}/>
             }
 
-            <CartFooter allStatus={this.props.allStatus} setChoose={this.props.setChoose} curType={this.props.currentTypes} list={this.props.goodList}/>
+            <CartFooter delData={this.props.delData} delStatus={this.props.delStatus} allStatus={this.props.allStatus} setChoose={this.props.setChoose} setDelSelect={this.props.setDelSelect} curType={this.props.currentTypes} list={this.props.goodList}/>
         </div>
     }
 }

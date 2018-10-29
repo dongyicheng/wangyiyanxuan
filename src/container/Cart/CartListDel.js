@@ -7,7 +7,7 @@ export default class CartListDel extends React.Component{
                 {this.props.list.map((item,index) => {
                     return <li key={index}>
                         <div className='choose'>
-                            {item.delSelect ? <i onClick={() => {this.props.setDelSelect(index)}} className='iconfont icon-gouxuan'></i> : <i onClick={() => {this.props.setDelSelect(index)}} className='iconfont icon-radio'></i>}
+                            { item.delSelect ? <i onClick={() => {this.props.setDelSelect({index})}} className='iconfont icon-gouxuan'></i> : <i onClick={() => {this.props.setDelSelect({index})}} className='iconfont icon-radio'></i> }
                         </div>
                         <div className='cart_img'>
                             <img src={item.url} alt=""/>

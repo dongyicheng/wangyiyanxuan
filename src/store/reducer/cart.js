@@ -3,6 +3,7 @@ import * as Types from '../action-types';
 let initState = {
     currentTypes:true, // 头部编辑状态
     allStatus:false, // 编辑页面，底部的选中状态
+    delStatus:false, // 删除页面，底部的选中状态
     a:true, // 没有实际意义，仅用于渲染页面
     goodList:[] // 购物车列表信息
 }
@@ -22,23 +23,18 @@ export default function home(state=initState,action) {
             return {...state,goodList:action.payload,a:!state.a};
         case Types.SET_CURTYPE:
             if(state.currentTypes){
-                return {...state,currentTypes:!state.currentTypes,allStatus:false}
+                return {...state,currentTypes:!state.currentTypes}
             }else{
-                state.goodList = state.goodList.map((item) => {
-                    item.delSelect = false;
-                    return item;
-                })
-                let status1 = state.goodList.every((item) => {
-                    return item.isSelected;
-                })
-                console.log(status1,789);
-                return {...state,currentTypes:!state.currentTypes,allStatus:status1,goodList:state.goodList};
+                console.log(action.payload);
+                return {...state,currentTypes:!state.currentTypes,delStatus:false,goodList:action.payload};
             }
         case Types.SET_DEL:
-            state.goodList[action.i]['delSelect'] ? state.goodList[action.i]['delSelect'] = !state.goodList[action.i]['delSelect']: state.goodList[action.i]['delSelect'] = true;
-            return {...state,goodList:state.goodList,a:!state.a};
+            let delStatus = action.payload.every((item) => {
+                return item.delSelect;
+            })
+            return {...state,goodList:action.payload,delStatus:delStatus,a:!state.a};
         case Types.DEL_DATA:
-            return {...state,goodList:action.payload};
+            return {...state,goodList:action.payload,a:!state.a};
     }
     return state;
 }

@@ -8,8 +8,7 @@ export default class CartHeader extends React.Component{
             <span className='title'>购物车</span>
             <div className='right'>
                 {this.props.curType ? <span className='coupon'>领券</span> : ''}
-
-                <span className='edit' onClick={() => {this.props.changeType()}}>{str}</span>
+                <span className='edit' onClick={() => {this.props.changeType(this.props.curType)}}>{str}</span>
             </div>
         </div>
     }

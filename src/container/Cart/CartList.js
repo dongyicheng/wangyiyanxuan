@@ -2,7 +2,6 @@ import React from 'react';
 
 export default class CartList extends React.Component{
     render(){
-
         return <div className='cart_list'>
             <ul>
                 {this.props.list.map((item,index) => {
