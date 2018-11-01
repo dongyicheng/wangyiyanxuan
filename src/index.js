@@ -4,9 +4,11 @@ import Home from './container/Home/Home'
 import Cart from './container/Cart/Cart'
 import Class from './container/Class/Class'
 import Goods from './container/Goods/Goods'
+import Search from "./component/Search/Search"
 import Profile from './container/Profile/Profile'
+import Category from './container/Class/CategoryBody'
 import App from './container/App'
-import store from './store'
+import store from './store/index'
 import {Provider} from 'react-redux'
 import {HashRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
 import Item from './container/Home/Item';
@@ -24,4 +26,4 @@ ReactDOM.render(
                 <Route path="/item/:id" component={Item}/>
             </App>
         </Provider>
-    </Router>,window.root)
+    </Router>,window.root);
