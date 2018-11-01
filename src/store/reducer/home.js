@@ -4,6 +4,9 @@ let initState={
     sliders:[],
     category:[],
     list:[],
+    hours:[],
+    min:[],
+    sed:[]
 }
 export default function home(state=initState,action){
     switch (action.type) {
@@ -13,6 +16,8 @@ export default function home(state=initState,action){
             return {...state,sliders:action.payload}
         case Types.GET_LIST:
             return {...state,list:action.payload}
+        case Types.TIME:
+            return {...state,hours}
         // case Types.SET_LESSONS:
         //     return {...state,lessons:{
         //         list:[...state.lessons.list,...action.payload.list],

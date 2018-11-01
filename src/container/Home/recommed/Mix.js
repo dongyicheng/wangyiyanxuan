@@ -1,27 +1,11 @@
 import React, { Component } from 'react'
-import './index.less'
 
-export default class Scroll extends Component {
-    componentDidMount(){
-        this.changeColor(this.props.color)
-        this.changeBg(this.props.bg)
-        this.changePcolor(this.props.p)
-    }
-    changeColor=(color)=>{
-        this.aside.style.color=color;
-    }
-    changeBg=(color)=>{
-        this.aside.style.background=color;
-    }
-    changePcolor=(color)=>{
-        this.p.style.background=color;
-    }
+export default class Mix extends Component {
   render() {
     return (
       <div>
-        <div className="aside" ref={x=>{this.aside=x}}>
-            <p>新品首发</p>
-            <p ref={x=>{this.p=x}}>查看全部></p>
+        <div className="img_box">
+           <img src={this.props.img?this.props.img.url:''}></img>
         </div>
         <div className="scroll">
             <div className="list">
@@ -37,7 +21,7 @@ export default class Scroll extends Component {
                 </ul>
             </div>
         </div>
-    </div>
+      </div>
     )
   }
 }

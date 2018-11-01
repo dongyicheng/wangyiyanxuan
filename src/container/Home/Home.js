@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import action from '../../store/action/home';
 import {HashRouter as Router,Route,Switch,Redirect} from 'react-router-dom'
 import Recommend from './recommed';
+import Item from './Item';
 
 class Home extends Component {
   componentDidMount(){
@@ -12,6 +13,7 @@ class Home extends Component {
     this.props.getSlider()
   }
   render() {
+    console.log(this.props.list)
     return (
       <div className="box">
         <HomeSearch list={this.props.category}/>

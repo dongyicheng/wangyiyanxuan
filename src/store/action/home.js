@@ -1,12 +1,13 @@
 import * as Types from '../action-types'
 import {getCategory, getSliders, getList} from "../../api/home"
+// import { counter } from "../../../until"
 export default {
     getCategory() {
         return function (dispatch, getState) {
-            getCategory().then(list=>{
+            getCategory().then(category=>{
                 dispatch({
                     type:Types.GET_CATEGORY,
-                    payload:list
+                    payload:category
                 })
             })
         }
@@ -30,5 +31,5 @@ export default {
                 })
             })
         }
-    }
+    },
 }
