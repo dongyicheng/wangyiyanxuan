@@ -24,4 +24,8 @@ ReactDOM.render(
                 <Route path="/search" component={Search}/>
             </App>
         </Provider>
+<<<<<<< HEAD
     </Router>,window.root);
+=======
+    </Router>,window.root)
+>>>>>>> 738adb83699fb0c6234750ae36c2e2480f4837c5

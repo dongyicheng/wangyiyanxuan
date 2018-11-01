@@ -8,7 +8,7 @@ class Search extends Component {
     render() {
         return <div className="search">
             <div className="search-input">
-                <input type="text"/>
+                <input type="text" placeholder="爆品 日式和风声波式电动牙刷 限时限量抢"/>
                 <Link to="/">取消</Link>
             </div>
             <div className="search-body">
