@@ -9,7 +9,6 @@ class Item extends Component {
       return item.id==this.props.match.param.id
     })
   }
-  componentDidMount()
   render() {
     console.log(this.props,',,,',this.getSliders())
     return (
